@@ -10,20 +10,24 @@
     <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
 
     <link rel="import" href="../placetobe-navigation-bar.html">
+    <link rel="import" href="../../placetobe-button/placetobe-button.html">
 
     <style is="custom-style" include="demo-pages-shared-styles">
     </style>
   </head>
   <body>
 
-    <div class="vertical-section-container centered">
-      <h3>Basic placetobe-navigation-bar Demo</h3>
-      <demo-snippet>
-        <template>
-          <placetobe-navigation-bar></placetobe-navigation-bar>
-        </template>
-      </demo-snippet>
-    </div>
+    <h3>Basic placetobe-navigation-bar Demo</h3>
+    <demo-snippet>
+      <template>
+        <placetobe-navigation-bar>
+          <li slot="navigation" class="selected"><a href="#">Het studenten Hotel</a></li>
+          <li slot="navigation">Downloads</li>
+          <li slot="navigation">Investeerderservaringen</li>
+          <placetobe-button slot="footer">investeer</placetobe-button>
+        </placetobe-navigation-bar>
+      </template>
+    </demo-snippet>
 
   </body>
 </html>
