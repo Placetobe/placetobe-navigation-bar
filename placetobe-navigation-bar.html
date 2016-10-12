@@ -1,0 +1,34 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`placetobe-navigation-bar`
+Placetobe Navigation Bar
+
+@demo demo/index.html 
+-->
+
+<dom-module id="placetobe-navigation-bar">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'placetobe-navigation-bar',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'placetobe-navigation-bar',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
