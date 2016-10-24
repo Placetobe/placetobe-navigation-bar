@@ -97,9 +97,12 @@ Placetobe Navigation Bar
       :host nav ul ::slotted(li a) {
         color: var(--placetobe-color-darkblue);
         text-decoration: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
       }
 
-      :host nav ul ::slotted(li.selected),
+      :host nav ul ::slotted(li[data-selected]),
       :host nav ul ::slotted(li:hover) {
         border-bottom-color: var(--placetobe-color-darkblue);        
       }
