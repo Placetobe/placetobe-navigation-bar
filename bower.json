@@ -4,6 +4,7 @@
   "main": "placetobe-navigation-bar.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.6.0",
+    "placetobe-behaviors": "Placetobe/placetobe-behaviors",
     "placetobe-styles": "Placetobe/placetobe-styles"
   },
   "devDependencies": {
