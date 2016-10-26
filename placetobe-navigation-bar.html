@@ -14,43 +14,30 @@ Placetobe Navigation Bar
     <style>
       
       :host {
+        @apply(--placetobe-border-box);
         display: block;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-        -o-box-sizing: border-box;
       }
 
       :host section {
+        @apply(--placetobe-border-box);
         width: 100%;
-        height: 54px;
+        height: calc( var(--placetobe-margin) * 3 );
         background-color: var(--placetobe-color-yellow);
-        justify-content: center;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-        -o-box-sizing: border-box;
       }
 
       :host .container {
+        @apply(--placetobe-border-box);
+        @apply(--placetobe-flex-layout--horizontal);
         max-width: var(--placetobe-layout-width);
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-        -o-box-sizing: border-box;
-        white-space: nowrap;
         height: 100%;
-        display: flex;
         margin: 0 auto;
+        white-space: nowrap;
       }
 
       :host nav {
-        padding: 0 0;
+        @apply(--placetobe-flex-item--1);
+        padding: 0;
         height: 100%;
-        flex: 1;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
       }
@@ -63,7 +50,7 @@ Placetobe Navigation Bar
       }
 
       :host nav ul {
-        display: flex;
+        @apply(--placetobe-flex-layout--horizontal);
         margin: 0;
         padding: 0;
         list-style: none;
@@ -72,34 +59,30 @@ Placetobe Navigation Bar
       }
 
       :host nav ul ::slotted(li) {
+        @apply(--placetobe-border-box);
+        @apply(--placetobe-flex-item--none);
+        @apply(--placetobe-flex-layout--horizontal);
+        @apply(--placetobe-cross-align--center);
         @apply(--placetobe-font-heading4);
         font-size: var(--placetobe-font-heading4-size--small);
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-        -o-box-sizing: border-box;
         color: var(--placetobe-color-darkblue);  
-        margin: 0px 9px;
+        margin: 0px calc( var(--placetobe-margin) / 2 );
         padding: 0;
         height: 100%;
-        flex: none;
-        display: flex;
-        align-items: center;
         border-bottom: 4px solid transparent;
         cursor: pointer;
       }
 
       :host nav ul ::slotted(li:last-child) {
-        padding-right: 9px;
+        padding-right: calc( var(--placetobe-margin) / 2 );
       }
 
       :host nav ul ::slotted(li a) {
+        @apply(--placetobe-flex-layout--horizontal);
+        @apply(--placetobe-cross-align--center);
         color: var(--placetobe-color-darkblue);
         text-decoration: none;
         height: 100%;
-        display: flex;
-        align-items: center;
       }
 
       :host nav ul ::slotted(li[data-selected]),
@@ -108,10 +91,10 @@ Placetobe Navigation Bar
       }
 
       :host footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 12px 18px;
+        @apply(--placetobe-flex-layout--horizontal);
+        @apply(--placetobe-flex-align--center);
+        @apply(--placetobe-cross-align--center);
+        padding: calc( var(--placetobe-margin) / 3 * 2 ) var(--placetobe-margin);
         display: none;
       }
 
@@ -126,8 +109,8 @@ Placetobe Navigation Bar
         }
 
         :host nav ul ::slotted(li) {
-          margin-left: 18px;
-          margin-right: 18px;
+          margin-left: var(--placetobe-margin);
+          margin-right: var(--placetobe-margin);
         }
       }
 
