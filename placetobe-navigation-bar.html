@@ -23,13 +23,18 @@ Placetobe Navigation Bar
         width: 100%;
         height: calc( var(--placetobe-margin) * 3 );
         background-color: var(--placetobe-color-yellow);
+        @apply --placetobe-box-shadow
       }
 
       :host .container {
         @apply(--placetobe-border-box);
         @apply(--placetobe-flex-layout--horizontal);
-        max-width: var(--placetobe-layout-width);
+        @apply(--placetobe-flex-align--space-between);
+        @apply(--placetobe-cross-align--start);
+        @apply(--placetobe-flex-wrap--nowrap);
         height: 100%;
+        max-width: calc( var(--placetobe-layout-width) + (var(--placetobe-margin) * 2) );
+        padding: 0 var(--placetobe-margin);
         margin: 0 auto;
         white-space: nowrap;
       }
@@ -66,7 +71,7 @@ Placetobe Navigation Bar
         @apply(--placetobe-font-heading4);
         font-size: var(--placetobe-font-heading4-size--small);
         color: var(--placetobe-color-darkblue);  
-        margin: 0px calc( var(--placetobe-margin) / 2 );
+        margin: 0px;
         padding: 0;
         height: 100%;
         border-bottom: 4px solid transparent;
@@ -94,7 +99,7 @@ Placetobe Navigation Bar
         @apply(--placetobe-flex-layout--horizontal);
         @apply(--placetobe-flex-align--center);
         @apply(--placetobe-cross-align--center);
-        padding: calc( var(--placetobe-margin) / 3 * 2 ) var(--placetobe-margin);
+        padding: calc( var(--placetobe-margin) / 3 * 2 ) 0;
         display: none;
       }
 
@@ -111,6 +116,14 @@ Placetobe Navigation Bar
         :host nav ul ::slotted(li) {
           margin-left: var(--placetobe-margin);
           margin-right: var(--placetobe-margin);
+        }
+
+        :host nav ul ::slotted(li:first-child) {
+          margin-left: 0;
+        }
+
+        :host nav ul ::slotted(li:last-child) {
+          margin-right: 0;
         }
       }
 
