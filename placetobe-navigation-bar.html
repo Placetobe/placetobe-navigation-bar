@@ -110,7 +110,10 @@ Placetobe Navigation Bar
         }
 
         :host footer {
-          display: block;
+          @apply(--placetobe-border-box);
+          @apply(--placetobe-flex-item--none);
+          @apply(--placetobe-flex-layout--horizontal);
+          @apply(--placetobe-cross-align--right);
         }
 
         :host nav ul ::slotted(li) {

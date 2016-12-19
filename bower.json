@@ -5,7 +5,8 @@
   "dependencies": {
     "polymer": "Polymer/polymer#^1.6.0",
     "placetobe-behaviors": "Placetobe/placetobe-behaviors",
-    "placetobe-styles": "Placetobe/placetobe-styles"
+    "placetobe-styles": "Placetobe/placetobe-styles",
+    "placetobe-icons": "Placetobe/placetobe-icons"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
